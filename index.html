@@ -17,18 +17,10 @@
         <!-- Favicon de la page -->
         <link rel="icon" type="image/png" href="assets/images/favicon.png">
         <!-- Bootstrap -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-        <!-- JavaScript Bundle with Popper pour Bootstrap -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <!-- Font Awesome -->
         <script src="https://kit.fontawesome.com/a6507da0d1.js" crossorigin="anonymous"></script>
-        <!-- SweetAlert -->
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        <!-- Mustache JS -->
-        <script src="./assets/mustache.js-master/mustache.js"></script>
-        <!-- JQuery Min -->
-        <script src="./assets/js/jquery.min.js"></script>
         <!-- Scripts personnalisés -->
         <script src="./assets/js/age.js"></script>
         <script src="./assets/js/anneeCopyright.js"></script>
@@ -36,191 +28,181 @@
     <!-- Début du corps de la page -->
     <body class="h-100 w-100">
         <!-- Début Barre de navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
             <div class="container-fluid">
-              <a class="navbar-brand fw-bolder" href="./"><i class="fa-regular fa-clipboard"></i> CV</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active">Mr. Morgan MINBIELLE <span class="age"></span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link fw-bolder">Alternant développeur Web</a>
-                  </li>
-                </ul>
-                <a class="btn btn-outline-light" href="https://github.com/GerlariMin/" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-              </div>
+                <p> <span class="navbar-brand fw-bolder">Mr. Morgan MINBIELLE <span id="age"></span></span>
+                    <br>
+                    <span class="navbar-text">
+                        Lead developper & chef de projet technique
+                    </span>
+                </p>
+                <a class="ms-auto navbar-text text-decoration-none text-reset" href="https://github.com/GerlariMin/" rel="noopener noreferrer" target="_blank">
+                    <button class="btn btn-outline-dark">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </button>
+                </a>
             </div>
         </nav>
         <!-- Fin Barre de navigation -->
         <!-- Début container -->
-        <div class="container mt-5 mb-5 text-center">
+        <div class="container-fluid mt-5 mb-5 text-center">
             <div class="row">
                 <div class="col-4">
-                    <!-- Présentation -->
-                    <div class="card border-info mb-3">
+                    <!-- Compétences -->
+                    <div class="border border-opacity-50 card shadow-lg text-bg-light mb-3">
                         <div class="card-header">
-                            <h4 class="fw-bolder text-info"><i class="fa-solid fa-person-chalkboard"></i> Présentation</h4>
+                            <h4 class="fw-bolder text-primary-emphasis"><i class="fa-solid fa-user-secret"></i> Compétences</h4>
                         </div>
-                        <div class="card-body text-start p-1">
-                            <p class="card-text">Actuellement étudiant en deuxième année (M2) du Master ETGL au centre de formation CFA AFORP d'Issy-les-Moulineaux et ingénieur développeur Web au sein de l'École Polytechnique.</p>
-                            <p class="card-text">En alternance depuis Janvier 2020, mes missions en entreprise se sont essentiellement concetrées sur la chefferie de projet (relation client, suivi, livrable), le développement Web (PHP, SQL), le respect des normes RGPD et le travail en équipe.</p>
+                        <div class="card-body p-2">
+                            <!-- Développement -->
+                            <h5 class="card-title fw-bolder text-success-emphasis"><i class="fa-solid fa-window-restore"></i> Développement</h5>
+                            <div class="card-body justify-content-between row text-center p-2">
+                                <div class="badge col-3 m-1 shadow text-bg-light"><i class="fa-brands fa-php text-primary-emphasis"></i> PHP 8</div>
+                                <div class="badge col-3 m-1 shadow text-bg-light"><i class="fa-brands fa-html5 text-danger-emphasis"></i> HTML 5</div>
+                                <div class="badge col-3 m-1 shadow text-bg-light"><i class="fa-brands fa-css3-alt text-info-emphasis"></i> CSS 3</div>
+                                <div class="badge col-3 m-1 shadow text-bg-light"><i class="fa-solid fa-code text-black text-dark-emphasis"></i> Mustache</div>
+                                <div class="badge col-3 m-1 shadow text-bg-light"><i class="fa-brands fa-square-js text-warning"></i> JavaScript</div>
+                                <div class="badge col-3 m-1"> </div>
+                                <div class="badge col-3 m-1 shadow text-bg-light"><i class="fa-solid fa-database text-warning-emphasis"></i> MariaDB</div>
+                                <div class="badge col-3 m-1 shadow text-bg-light"><i class="fa-solid fa-database text-info-emphasis"></i> MySQL</div>
+                                <div class="badge col-3 m-1 shadow text-bg-light"><i class="fa-solid fa-database text-danger"></i> Oracle</div>
+                                <div class="badge col-3 m-1 shadow text-bg-light"><i class="fa-solid fa-database text-info-emphasis"></i> Pl/PgSQL</div>
+                                <div class="badge col-3 m-1"> </div>
+                                <div class="badge col-3 m-1"> </div>
+                                <div class="badge col-3 m-1 shadow text-bg-light"><i class="fa-solid fa-terminal"></i> Bash</div>
+                                <div class="badge col-3 m-1 shadow text-bg-light"><i class="fa-solid fa-code text-primary-emphasis"></i> C</div>
+                                <div class="badge col-3 m-1 shadow text-bg-light"><i class="fa-solid fa-code text-primary-emphasis"></i> C++</div>
+                                <div class="badge col-3 m-1 shadow text-bg-light"><i class="fa-brands fa-java text-danger-emphasis"></i> Java</div>
+                                <div class="badge col-3 m-1 shadow text-bg-light"><i class="fa-brands fa-python text-warning-emphasis"></i> Python</div>
+                                <div class="badge col-3 m-1"> </div>
+                                <div class="badge col-4 m-1 shadow text-bg-light"><i class="fa-brands fa-react text-info-emphasis"></i> React Native</div>
+                            </div>
+                            <!-- Langues -->
+                            <h5 class="card-title fw-bolder text-success-emphasis"><i class="fa-solid fa-language"></i> Langues</h5>
+                            <div class="card-body justify-content-between row text-center text-center p-2">
+                                <div class="badge col-3 m-1 shadow text-bg-light"><i class="fa-solid fa-language"></i> Français</div>
+                                <div class="badge col-3 m-1 shadow text-bg-light"><i class="fa-solid fa-language"></i> Anglais</div>
+                                <div class="badge col-3 m-1 shadow text-bg-light"><i class="fa-solid fa-language"></i> Espagnol</div>
+                            </div>
                         </div>
                     </div>
-                    <!-- Compétences -->
-                    <div class="card border-success mb-3">
+                    <!-- Outils -->
+                    <div class="border border-opacity-50 card shadow-lg text-bg-light mb-3">
                         <div class="card-header">
-                            <h4 class="fw-bolder text-success"><i class="fa-solid fa-list"></i> Compétences</h4>
+                            <h4 class="fw-bolder text-primary-emphasis"><i class="fa-solid fa-user-gear"></i> Outils</h4>
                         </div>
-                        <div class="card-body text-start p-1">
-                            <!-- Développement -->
-                            <h5 class="card-title fw-bolder text-success"><i class="fa-solid fa-window-restore"></i> Développement</h5>
-                            <table class="table table-striped table-hover table-sm table-bordered text-center align-middle">
-                                <tbody>
-                                    <tr>
-                                        <td><i class="fa-brands fa-php"></i> PHP 8</td>
-                                        <td><i class="fa-brands fa-html5"></i> HTML 5</td>
-                                        <td><i class="fa-brands fa-css3-alt"></i> CSS 3</td>
-                                        <td><i class="fa-solid fa-code"></i> Mustache</td>
-                                    </tr>
-                                    <tr>
-                                        <td><i class="fa-brands fa-square-js"></i> JavaScript</td>
-                                        <td><i class="fa-solid fa-database"></i> MariaDB</td>
-                                        <td><i class="fa-solid fa-database"></i> MySQL</td>
-                                        <td><i class="fa-solid fa-database"></i> Pl/PgSQL</td>
-                                    </tr>
-                                    <tr>
-                                        <td><i class="fa-brands fa-java"></i> Java</td>
-                                        <td><i class="fa-brands fa-python"></i> Python</td>
-                                        <td><i class="fa-brands fa-react"></i> React Native</td>
-                                        <td><i class="fa-solid fa-code"></i> C</td>
-                                    </tr>
-                                    <tr>
-                                        <td><i class="fa-solid fa-code"></i> C++</td>
-                                        <td><i class="fa-solid fa-terminal"></i> Bash</td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <!-- Autres -->
-                            <h5 class="card-title fw-bolder text-success"><i class="fa-solid fa-layer-group"></i> Autres</h5>
-                            <table class="table table-striped table-hover table-sm table-bordered text-center align-middle">
-                                <tbody>
-                                    <tr>
-                                        <td><i class="fa-solid fa-window-maximize"></i> Modelio</td>
-                                        <td><i class="fa-brands fa-git-alt"></i> Git</td>
-                                        <td><i class="fa-solid fa-chart-gantt"></i> Gantt</td>
-                                        <td><i class="fa-brands fa-docker"></i> Docker</td>
-                                    </tr>
-                                    <tr>
-                                        <td><i class="fa-solid fa-ruler"></i> UML</td>
-                                        <td><i class="fa-solid fa-ruler"></i> Design Pattern</td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <!-- Langues -->
-                            <h5 class="card-title fw-bolder text-success"><i class="fa-solid fa-language"></i> Langues</h5>
-                            <table class="table table-striped table-hover table-sm table-bordered text-center align-middle">
-                                <tbody>
-                                    <tr>
-                                        <td><i class="fa-solid fa-language"></i> Français</td>
-                                        <td><i class="fa-solid fa-language"></i> Anglais</td>
-                                        <td><i class="fa-solid fa-language"></i> Espagnol</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="card-body text-start p-2">
+                            <div class="card-body justify-content-between row text-center text-center p-2">
+                                <div class="badge col-3 m-1 shadow text-bg-light"><i class="fa-solid fa-computer text-success"></i> Anaconda</div>
+                                <div class="badge col-3 m-1 shadow text-bg-light"><i class="fa-brands fa-bootstrap"></i> Boostrap</div>
+                                <div class="badge col-3 m-1 shadow text-bg-light"><i class="fa-solid fa-computer"></i> Composer</div>
+                                <div class="badge col-3 m-1 shadow text-bg-light"><i class="fa-brands fa-docker text-info"></i> Docker</div>
+                                <div class="badge col-3 m-1 shadow text-bg-light"><i class="fa-solid fa-computer text-warning-emphasis"></i> Eclipse</div>
+                                <div class="badge col-3 m-1 shadow text-bg-light"><i class="fa-solid fa-chart-gantt text-warning"></i> Gantt</div>
+                                <div class="badge col-3 m-1 shadow text-bg-light"><i class="fa-brands fa-git-alt text-danger-emphasis"></i> Git</div>
+                                <div class="badge col-4 m-1 shadow text-bg-light"><i class="fa-solid fa-computer"></i> LDAP Admin</div>
+                                <div class="badge col-4 m-1 shadow text-bg-light"><i class="fa-solid fa-computer"></i> LM Studio</div>
+                                <div class="badge col-3 m-1 shadow text-bg-light"><i class="fa-solid fa-window-maximize text-danger"></i> Modelio</div>
+                                <div class="badge col-4 m-1 shadow text-bg-light"><i class="fa-solid fa-computer"></i> PHPStorm</div>
+                                <div class="badge col-4 m-1 shadow text-bg-light"><i class="fa-brands fa-symfony"></i> Symfony</div>
+                                <div class="badge col-5 m-1 shadow text-bg-light"><i class="fa-solid fa-computer text-info-emphasis"></i> Visual Studio Code</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Projets -->
+                    <div class="border border-opacity-50 card shadow-lg text-bg-light mb-3">
+                        <div class="card-header">
+                            <h4 class="fw-bolder text-primary-emphasis"><i class="fa-solid fa-person-chalkboard"></i> Projets</h4>
+                        </div>
+                        <div class="card-body text-center text-center p-2">
+                            <div class="justify-content-between row">
+                                <div class="col-6"><i class="fa-solid fa-window-maximize text-primary-emphasis"></i> <a class="text-decoration-none text-reset link-primary" href="https://github.com/GerlariMin/PokeDraw" rel="noopener noreferrer" target="_blank">PokéDraw <i class="fa-solid fa-link"></i></a></div>
+                                <div class="col-6"><i class="fa-solid fa-window-maximize text-primary-emphasis"></i> <a class="text-decoration-none text-reset link-primary" href="https://github.com/GerlariMin/MemoMots" rel="noopener noreferrer" target="_blank">MémoMots <i class="fa-solid fa-link"></i></a></div>
+                                <div class="col-6"><i class="fa-solid fa-mobile-screen-button text-primary-emphasis"></i> <a class="text-decoration-none text-reset link-primary" href="https://github.com/GerlariMin/Ionic-IMC" rel="noopener noreferrer" target="_blank">Ionic IMC <i class="fa-solid fa-link"></i></a></div>
+                                <div class="col-6"><i class="fa-brands fa-java text-primary-emphasis"></i> <a class="text-decoration-none text-reset link-primary" href="https://github.com/GerlariMin/JAVAgenda" rel="noopener noreferrer" target="_blank">JAVAgenda <i class="fa-solid fa-link"></i></a></div>
+                                <div class="col-7"><i class="fa-brands fa-docker text-primary-emphasis"></i> <a class="text-decoration-none text-reset link-primary" href="https://github.com/GerlariMin/Docker-PortFolio" rel="noopener noreferrer" target="_blank">Docker PortFolio <i class="fa-solid fa-link"></i></a></div>
+                                <div class="col-5"><i class="fa-solid fa-blog text-primary-emphasis"></i> <a class="text-decoration-none text-reset link-primary" href="https://github.com/GerlariMin/PortFolioV3" rel="noopener noreferrer" target="_blank">PortFolio <i class="fa-solid fa-link"></i></a></div>
+                                <div class="col-6"><i class="fa-solid fa-gamepad text-primary-emphasis"></i> <a class="text-decoration-none text-reset link-primary" href="https://github.com/GerlariMin/MonkeyBall" rel="noopener noreferrer" target="_blank">MonkeyBall <i class="fa-solid fa-link"></i></a></div>
+                                <div class="col-6"><i class="fa-solid fa-window-maximize text-primary-emphasis"></i> <a class="text-decoration-none text-reset link-primary" href="https://github.com/GerlariMin/RetroGames" rel="noopener noreferrer" target="_blank">RetroGames <i class="fa-solid fa-link"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contact -->
+                    <div class="border border-opacity-50 card shadow-lg text-bg-light mb-3">
+                        <div class="card-header">
+                            <h4 class="fw-bolder text-primary-emphasis"><i class="fa-solid fa-person-circle-question"></i> Contact</h4>
+                        </div>
+                        <div class="card-body text-start p-2">
+                            <p class="card-text"><a class="text-decoration-none text-reset link-primary" href="mailto:morgan.minbielle@outlook.fr?subject=Contact" rel="noopener noreferrer" target="_blank"><i class="fa-solid fa-envelope-open-text text-primary-emphasis"></i> morgan.minbielle@outlook.fr</a></p>
+                            <p class="card-text"><a class="text-decoration-none text-reset link-primary" href="https://www.linkedin.com/in/morgan-minbielle-5619b8178/" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-linkedin text-primary-emphasis"></i> LinkedIn</a></p>
+                            <!--<p class="card-text"><a class="text-decoration-none text-reset link-primary" href="https://monportfolio-mm.000webhostapp.com/accueil/" rel="noopener noreferrer" target="_blank"><i class="fa-solid fa-window-restore text-info"></i> Site Web</a></p>-->
                         </div>
                     </div>
                     <!-- Vacations -->
-                    <div class="card border-success mb-3">
+                    <div class="border border-opacity-50 card shadow-lg text-bg-light mb-3">
                         <div class="card-header">
-                            <h4 class="fw-bolder text-success"><i class="fa-solid fa-briefcase"></i> Vacations</h4>
+                            <h4 class="fw-bolder text-primary-emphasis"><i class="fa-solid fa-person-circle-question"></i> Vacations</h4>
                         </div>
-                        <div class="card-body text-start p-1">
-                            <p class="card-text"><i class="fa-solid fa-lemon text-success"></i> Agent contractuel au Carrefour Market (33) - Juillet/ Août 2018</p>
-                            <p class="card-text"><i class="fa-solid fa-laptop-file text-success"></i> Agent contractuel au Ministère de l'Éducation Nationale (75) - Juillet 2016</p>
-                            <p class="card-text"><i class="fa-solid fa-laptop-file text-success"></i> Agent contractuel au Ministère de l'Enseignement Supérieur (75) - Juillet 2017</p>
+                        <div class="card-body text-start p-2">
+                            <p class="card-text"><i class="fa-solid fa-lemon text-warning"></i> Agent contractuel au Carrefour Market (33) - Juillet/ Août 2018</p>
+                            <p class="card-text"><i class="fa-solid fa-laptop-file text-primary-emphasis"></i> Agent contractuel au Ministère de l'Enseignement Supérieur (75) - Juillet 2017</p>
+                            <p class="card-text"><i class="fa-solid fa-laptop-file text-primary-emphasis"></i> Agent contractuel au Ministère de l'Éducation Nationale (75) - Juillet 2016</p>
                         </div>
                     </div>
-                    <!-- Loisirs -->
-                    <div class="card border-dark mb-3">
+                    <!-- Centres d'intérêts -->
+                    <div class="border border-opacity-50 card shadow-lg text-bg-light mb-3">
                         <div class="card-header">
-                            <h4 class="fw-bolder text-dark"><i class="fa-solid fa-mug-hot"></i> Centres d'intérêts</h4>
+                            <h4 class="fw-bolder text-primary-emphasis"><i class="fa-solid fa-person-biking"></i> Centres d'intérêts</h4>
                         </div>
-                        <div class="card-body text-start p-1 ps-3 pe-3">
-                            <p class="card-text"><i class="fa-solid fa-car"></i> Sport mécanique</p>
-                            <p class="card-text"><i class="fa-solid fa-bicycle"></i> Vélo</p>
-                            <p class="card-text"><i class="fa-solid fa-heart-pulse"></i> Tennis</p>
-                            <p class="card-text"><i class="fa-solid fa-camera"></i> Photographie (<a class="text-decoration-none text-reset link-info" href="https://www.eyeem.com/u/gerlarimin/photos" rel="noopener noreferrer" target="_blank">EyeEm <i class="fa-solid fa-link"></i></a>)</p>
+                        <div class="card-body text-start p-2">
+                            <p class="card-text"><i class="fa-solid fa-car text-danger-emphasis"></i> Sport mécanique</p>
+                            <p class="card-text"><i class="fa-solid fa-bicycle  text-warning-emphasis"></i> Vélo (route)</p>
+                            <p class="card-text"><i class="fa-solid fa-microchip text-primary-emphasis"></i> Technologie</p>
+                            <p class="card-text"><i class="fa-solid fa-camera text-warning-emphasis"></i> Photographie (<a class="text-decoration-none text-reset link-warning" href="https://www.eyeem.com/u/gerlarimin/photos" rel="noopener noreferrer" target="_blank">EyeEm <i class="fa-solid fa-link"></i></a>)</p>
+                            <p class="card-text"><i class="fa-solid fa-table-tennis-paddle-ball text-success-emphasis"></i> Tennis</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-8">
-                    <!-- Formations -->
-                    <div class="card border-success mb-3">
+                    <!-- Présentation -->
+                    <div class="border border-opacity-50 card shadow-lg text-bg-light mb-3">
                         <div class="card-header">
-                            <h4 class="fw-bolder text-success"><i class="fa-solid fa-building-columns"></i> Formations</h4>
+                            <h4 class="fw-bolder text-primary-emphasis"><i class="fa-solid fa-chalkboard-user"></i> Présentation</h4>
                         </div>
-                        <div class="card-body text-center text-wrap p-1">
-                            <h5 class="card-title fw-bolder text-success">2021/2023 - <a class="text-decoration-none text-reset link-info" href="https://www.aforp.fr/formation-alternance/formation/titre-rncp-etgl-ecole-des-techniques-du-genie-logiciel" rel="noopener noreferrer" target="_blank">RNCP ETGL CFA AFORP <i class="fa-solid fa-link"></i></a> - Issy-les-Moulineaux (92)</h5>
-                            <p class="card-text">
-                                Mastère Ingénieur en Développement de Logiciels (ETGL) au centre de formation CFA AFORP d'Issy-lesMoulineaux.
-                                <br>
-                                En alternance à l'École Polytechnique.
-                            </p>
-
-                            <h5 class="card-title fw-bolder text-success">2020/2021 - <a class="text-decoration-none text-reset link-info" href="https://www.u-pec.fr/fr/formation/master-informatique-parcours-logiciels-surs#:~:text=Master%20Informatique%20parcours%20Logiciels%20s%C3%BBrs%201%20Capacit%C3%A9%20d%27accueil,5%20Environnement%20de%20recherche.%20...%206%20Statistiques.%20" rel="noopener noreferrer" target="_blank"> M1 Informatique <i class="fa-solid fa-link"></i></a> - UPEC (94)</h5>
-                            <p class="card-text">
-                                Master 1 Informatique parcours Logiciels Sûrs à L'Université Paris-Est Créteil (UPEC).
-                                <br>
-                                En alternance à l'École Polytechnique.
-                            </p>
-
-                            <h5 class="card-title fw-bolder text-success">2019/2020 - <a class="text-decoration-none text-reset link-info" href="https://www.letudiant.fr/etudes/annuaire-enseignement-superieur/formation/formation-licence-pro-securite-des-donnees-232412.html" rel="noopener noreferrer" target="_blank"> L3 Professionnelle Informatique <i class="fa-solid fa-link"></i></a> - UPEC (94)</h5>
-                            <p class="card-text">
-                                Licence 3 Professionnelle "Métiers de l'Informatique: Conception, Développement et Tests Logiciels Parcours Sécurité des Données" à L'Université Paris-Est Créteil (UPEC).
-                                <br>
-                                En alternance à l'École Polytechnique.
-                                <br>
-                                <span class="text-info">Diplômé avec mention Très Bien.</span>
-                            </p>
-
-                            <h5 class="card-title fw-bolder text-success">2016/2019 - <a class="text-decoration-none text-reset link-info" href="http://odf.univ-paris13.fr/fr/offre-de-formation/feuilleter-le-catalogue-1/sciences-technologies-sante-STS/dut-CB/dut-informatique-program-vdtin-316-2.html" rel="noopener noreferrer" target="_blank"> DUT Informatique <i class="fa-solid fa-link"></i></a> - IUT de Villetaneuse (93)</h5>
-                            <p class="card-text">
-                                DUT Informatique à l'Université Paris 13 (Université Sorbonne Paris Nord).
-                            </p>
-
-                            <h5 class="card-title fw-bolder text-success">2016 - <a class="text-decoration-none text-reset link-info" href="https://lycee-maximilienperret.fr/" rel="noopener noreferrer" target="_blank"> Baccalauréat Scientifique <i class="fa-solid fa-link"></i></a> - Maximilien Perret (94)</h5>
-                            <p class="card-text">
-                                Baccalauréat Scientifique, option Science de l'Ingénieur (SI), Informatique et Science du Numérique (ISN) et Latin au Lycée Maximilien Perret à Alfortville.
-                                <br>
-                                <span class="text-info">Diplômé avec mention Assez Bien.</span>
+                        <div class="card-body text-start p-2">
+                            <p class="card-text">Actuellement Lead Developper et chef de projet technique au sein de l'École Polytechnique.</p>
+                            <p class="card-text">Mes tâches résident essentiellement à faire de la gestion de créneaux de développements pour des projets "enseignements" de l'école (plateformes étudiantes & métiers), d'accompagner les métiers sur leurs projets avec des retours techniques (cahier des charges, FEB, accompagnement) ainsi que du développement ou de la maintenance (PHP 8 natif) de nos outils.</p>
                         </div>
                     </div>
                     <!-- Expériences -->
-                    <div class="card border-success mb-3">
+                    <div class="border border-opacity-50 card shadow-lg text-bg-light mb-3">
                         <div class="card-header">
-                            <h4 class="fw-bolder text-success"><i class="fa-solid fa-briefcase"></i> Expériences</h4>
+                            <h4 class="fw-bolder text-primary-emphasis"><i class="fa-solid fa-user-tie"></i> Expériences</h4>
                         </div>
-                        <div class="card-body text-center text-wrap p-1">
-                            <!-- Alternance -->
-                            <h5 class="card-title fw-bolder text-success">Depuis 2020 - Alternant Développeur - DSI École Polytechnique</h5>
+                        <div class="card-body text-center text-wrap p-2">
+                            <!-- CDI Ecole Polytechnique -->
+                            <h5 class="card-title fw-bolder text-success-emphasis">Depuis Septembre 2023 - Lead Developper/Chef de projet technique - DSI École Polytechnique</h5>
                             <ul class="list-unstyled">
-                                <li>Chefferie de projet (planification Gantt, suivi de projet, livrables, recette, support)</li>
-                                <li>Développement Web (PHP 8, Mustache, JavaScript, HTML, CSS)</li>
+                                <li>Lead Developper/Développeur sur les projets "enseignements" créés et maintenus par le pôle de développement</li>
+                                <li>Chefferie de projet (Cahier des charges, retours techniques, suivi, livrables) sur des projets de la bibliothèque</li>
+                                <li>Développement Web <span class="fw-bolder">(PHP 8, Mustache, JavaScript, HTML, CSS)</span></li>
                                 <li>Serveurs de qualification/ production</li>
-                                <li>Scripts automatisés (crontab)</li>
+                                <li>Scripts automatisés <span class="fw-bolder">(Bash, crontab)</span></li>
+                                <li>Travail en équipe</li>
+                            </ul>
+                            <!-- Alternance -->
+                            <h5 class="card-title fw-bolder text-success-emphasis">Janvier 2020 - Alternant Développeur - DSI École Polytechnique</h5>
+                            <ul class="list-unstyled">
+                                <li>Chefferie de projet (planification Gantt, suivi de projet, livrables, recette, support) sur un projet dédié à une gestion RH des personnels des laboratoires</li>
+                                <li>Développement Back-Office sur les différents projets "enseignements" créés et maintenus par le pôle de développement</li>
+                                <li>Développement Web <span class="fw-bolder">(PHP 8, Mustache, JavaScript, HTML, CSS)</span></li>
+                                <li>Serveurs de qualification/ production</li>
+                                <li>Scripts automatisés <span class="fw-bolder">(Bash, crontab)</span></li>
                                 <li>Travail en équipe</li>
                             </ul>
                             <!-- Stage DUT -->
-                            <h5 class="card-title fw-bolder text-success"> 2019 - Stage DUT - DSI Mairie d'Aubervilliers (93)</h5>
+                            <h5 class="card-title fw-bolder text-success-emphasis"> Avril/Juin 2019 - Stage DUT - DSI Mairie d'Aubervilliers (93)</h5>
                             <ul class="list-unstyled">
                                 <li>Automatisation des procédures de recrutements</li>
                                 <li>Développement Web <span class="fw-bolder">(HTML/ CSS, JavaScript, Bootstrap)</span></li>
@@ -228,29 +210,47 @@
                                 <li>Intégration de données <span class="fw-bolder">(Talend Open Studio)</span></li>
                                 <li>Création et gestion d'une base de données <span class="fw-bolder">(MySQL Workbench, PHP)</span></li>
                             </ul>
-                            <!-- Projets -->
-                            <h5 class="card-title fw-bolder text-success"> Projets</h5>
-                            <ul class="list-unstyled">
-                                <li><i class="fa-solid fa-mobile-screen-button text-success"></i> Ionic IMC <a class="text-decoration-none text-reset link-info fw-bolder" href="https://github.com/GerlariMin/Ionic-IMC" rel="noopener noreferrer" target="_blank"><i class="fa-solid fa-link"></i></a></li>
-                                <li><i class="fa-brands fa-java text-success"></i> JAVAgenda <a class="text-decoration-none text-reset link-info fw-bolder" href="https://github.com/GerlariMin/JAVAgenda" rel="noopener noreferrer" target="_blank"><i class="fa-solid fa-link"></i></a></li>
-                                <li><i class="fa-brands fa-docker text-success"></i> Docker PortFolio <a class="text-decoration-none text-reset link-info fw-bolder" href="https://github.com/GerlariMin/Docker-PortFolio" rel="noopener noreferrer" target="_blank"><i class="fa-solid fa-link"></i></a></li>
-                                <li><i class="fa-solid fa-blog text-success"></i> PortFolio <a class="text-decoration-none text-reset link-info fw-bolder" href="https://github.com/GerlariMin/PortFolioV3" rel="noopener noreferrer" target="_blank"><i class="fa-solid fa-link"></i></a></li>
-                                <li><i class="fa-solid fa-gamepad text-success"></i> MonkeyBall <a class="text-decoration-none text-reset link-info fw-bolder" href="https://github.com/GerlariMin/MonkeyBall" rel="noopener noreferrer" target="_blank"><i class="fa-solid fa-link"></i></a></li>
-                                <li><i class="fa-solid fa-window-maximize text-success"></i> RetroGames <a class="text-decoration-none text-reset link-info fw-bolder" href="https://github.com/GerlariMin/RetroGames" rel="noopener noreferrer" target="_blank"><i class="fa-solid fa-link"></i></a></li>
-                            </ul>
                         </div>
                     </div>
-                </div>
-                <div class="col-12">
-                    <!-- Coordonées -->
-                    <div class="card border-info mb-3">
+                    <!-- Formations -->
+                    <div class="border border-opacity-50 card shadow-lg text-bg-light mb-3">
                         <div class="card-header">
-                            <h4 class="fw-bolder text-info"><i class="fa-solid fa-circle-info"></i> Coordonées</h4>
+                            <h4 class="fw-bolder text-primary-emphasis"><i class="fa-solid fa-user-graduate"></i> Formations</h4>
                         </div>
-                        <div class="card-body text-start p-1 ps-3 pe-3">
-                            <p class="card-text"><a class="text-decoration-none text-reset link-info" href="mailto:morgan.minbielle@outlook.fr?subject=Contact" rel="noopener noreferrer" target="_blank"><i class="fa-solid fa-envelope-open-text text-info"></i> morgan.minbielle@outlook.fr</a></p>
-                            <p class="card-text"><a class="text-decoration-none text-reset link-info" href="https://www.linkedin.com/in/morgan-minbielle-5619b8178/" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-linkedin text-info"></i> LinkedIn</a></p>
-                            <p class="card-text"><a class="text-decoration-none text-reset link-info" href="https://monportfolio-mm.000webhostapp.com/accueil/" rel="noopener noreferrer" target="_blank"><i class="fa-solid fa-window-restore text-info"></i> Site Web</a></p>
+                        <div class="card-body text-center text-wrap p-2">
+                            <h5 class="card-title fw-bolder text-success-emphasis">2021/2023 - <a class="text-decoration-none text-reset link-primary" href="https://www.aforp.fr/formation-alternance/formation/titre-rncp-etgl-ecole-des-techniques-du-genie-logiciel" rel="noopener noreferrer" target="_blank">RNCP ETGL CFA AFORP <i class="fa-solid fa-link"></i></a> - Issy-les-Moulineaux (92)</h5>
+                            <p class="card-text">
+                                Mastère Ingénieur en Développement de Logiciels (ETGL) au centre de formation CFA AFORP d'Issy-lesMoulineaux.
+                                <br>
+                                En alternance à l'École Polytechnique.
+                            </p>
+
+                            <h5 class="card-title fw-bolder text-success-emphasis">2020/2021 - <a class="text-decoration-none text-reset link-primary" href="https://www.u-pec.fr/fr/formation/master-informatique-parcours-logiciels-surs#:~:text=Master%20Informatique%20parcours%20Logiciels%20s%C3%BBrs%201%20Capacit%C3%A9%20d%27accueil,5%20Environnement%20de%20recherche.%20...%206%20Statistiques.%20" rel="noopener noreferrer" target="_blank"> M1 Informatique <i class="fa-solid fa-link"></i></a> - UPEC (94)</h5>
+                            <p class="card-text">
+                                Master 1 Informatique parcours Logiciels Sûrs à L'Université Paris-Est Créteil (UPEC).
+                                <br>
+                                En alternance à l'École Polytechnique.
+                            </p>
+
+                            <h5 class="card-title fw-bolder text-success-emphasis">2019/2020 - <a class="text-decoration-none text-reset link-primary" href="https://www.letudiant.fr/etudes/annuaire-enseignement-superieur/formation/formation-licence-pro-securite-des-donnees-232412.html" rel="noopener noreferrer" target="_blank"> L3 Professionnelle Informatique <i class="fa-solid fa-link"></i></a> - UPEC (94)</h5>
+                            <p class="card-text">
+                                Licence 3 Professionnelle "Métiers de l'Informatique: Conception, Développement et Tests Logiciels Parcours Sécurité des Données" à L'Université Paris-Est Créteil (UPEC).
+                                <br>
+                                En alternance à l'École Polytechnique.
+                                <br>
+                                <span class="text-warning-emphasis">Diplômé avec mention Très Bien.</span>
+                            </p>
+
+                            <h5 class="card-title fw-bolder text-success-emphasis">2016/2019 - <a class="text-decoration-none text-reset link-primary" href="http://odf.univ-paris13.fr/fr/offre-de-formation/feuilleter-le-catalogue-1/sciences-technologies-sante-STS/dut-CB/dut-informatique-program-vdtin-316-2.html" rel="noopener noreferrer" target="_blank"> DUT Informatique <i class="fa-solid fa-link"></i></a> - IUT de Villetaneuse (93)</h5>
+                            <p class="card-text">
+                                DUT Informatique à l'Université Paris 13 (Université Sorbonne Paris Nord).
+                            </p>
+
+                            <h5 class="card-title fw-bolder text-success-emphasis">2016 - <a class="text-decoration-none text-reset link-primary" href="https://lycee-maximilienperret.fr/" rel="noopener noreferrer" target="_blank"> Baccalauréat Scientifique <i class="fa-solid fa-link"></i></a> - Maximilien Perret (94)</h5>
+                            <p class="card-text">
+                                Baccalauréat Scientifique, option Science de l'Ingénieur (SI), Informatique et Science du Numérique (ISN) et Latin au Lycée Maximilien Perret à Alfortville.
+                                <br>
+                                <span class="text-warning-emphasis">Diplômé avec mention Assez Bien.</span>
                         </div>
                     </div>
                 </div>
@@ -258,10 +258,10 @@
         </div>
         <!-- Fin container -->
         <!-- Début pied de page -->
-        <nav class="navbar navbar-dark bg-dark" style="bottom: 0;">
+        <nav class="navbar navbar-light bg-light" style="bottom: 0;">
             <div class="container-fluid">
                 <span class="navbar-brand mx-auto mb-0 h1">
-                    © 2022 <span class="anneeCopyright"></span> Copyright: Morgan MINBIELLE
+                    © 2022 <span id="anneeCopyright"></span> Copyright: Morgan MINBIELLE
                 </span>
             </div>
         </nav>
